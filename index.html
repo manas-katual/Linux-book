@@ -410,7 +410,7 @@
   --color-pink: #d53984;
 }
 </style>
-<p><img src="/Linux/assets/thoreaus_hut.svg" alt="thoreaus_hut.svg" /></p>
+<p><img src="./Linux/assets/thoreaus_hut.svg" alt="thoreaus_hut.svg" /></p>
 <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p>Welcome traveler! You’ve stumbled into my humble garden of thought</p>
 <p>I am currently exploring about Linux. Particularly I am making this notes for Red Hat (RHCSA Exam). But this notes apply for all Linux distros out there with some minor changes</p>
@@ -445,6 +445,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
