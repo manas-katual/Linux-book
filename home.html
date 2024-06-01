@@ -30,6 +30,8 @@
 
         <!-- Custom theme stylesheets -->
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body class="sidebar-visible no-js">
     <div id="body-container">
@@ -146,6 +148,9 @@
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/manas-katual" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
 
                     </div>
@@ -412,14 +417,15 @@
 </style>
 <p><img src="./Linux/assets/thoreaus_hut.svg" alt="thoreaus_hut.svg" /></p>
 <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>Welcome traveler! You’ve stumbled into my humble garden of thought</p>
-<p>I am currently exploring about Linux. Particularly I am making this notes for Red Hat (RHCSA Exam). But this notes apply for all Linux distros out there with some minor changes</p>
-<p>It is not well structured and completed yet. I am working on it. Feel free to correct me if anything is missing.</p>
+<p>Welcome traveler! You’ve stumbled into my humble garden of thought.</p>
+<p>I am currently exploring about Linux. Particularly I am making this notes for Red Hat (RHCSA Exam). But this notes apply for all Linux distros out there with some minor changes.</p>
+<p>This are my personal Notes and is not well structured and completed yet. I am working on it. Feel free to correct me if anything I have written is wrong.</p>
+<p>I will also try to add some tasks for practicing.</p>
 <h2 id="key-landing-pages"><a class="header" href="#key-landing-pages">Key Landing Pages</a></h2>
 <ul>
 <li><a href="./RHCSA.html">RHCSA</a></li>
-<li>[[Tasks]]</li>
-<li>[[RHCE]]</li>
+<li><a href="./Tasks.html">Tasks</a></li>
+<li><a href="./RHCE.html">RHCE</a></li>
 </ul>
 
                     </main>
@@ -445,22 +451,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

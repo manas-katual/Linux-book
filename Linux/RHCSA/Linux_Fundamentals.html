@@ -30,6 +30,8 @@
 
         <!-- Custom theme stylesheets -->
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body class="sidebar-visible no-js">
     <div id="body-container">
@@ -146,6 +148,9 @@
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/manas-katual" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
 
                     </div>
@@ -411,6 +416,7 @@
 }
 </style>
 <h1 id="fundamentals"><a class="header" href="#fundamentals">Fundamentals</a></h1>
+<hr />
 <h2 id="operating-system"><a class="header" href="#operating-system">Operating System</a></h2>
 <ul>
 <li>Operating system is the platform between the hardware and software of a computer.</li>
@@ -457,7 +463,7 @@
 <li>Linux has only Kernel space and no user space.</li>
 <li>Also, Linux is not a type of Unix.</li>
 <li>Linux is an independent, Unix like Kernel.</li>
-<li>Software companies like Redhat, Suse, Canonical (Ubuntu), etc. create user space on top of Linux Kernel and covert it into an Operating System.</li>
+<li>Software companies like Redhat, Suse, Canonical (Ubuntu), etc. create user space on top of Linux Kernel and convert it into an Operating System.</li>
 <li>Redhat Linux is an OS, but Linux is just a Kernel.</li>
 <li>Latest Stable Redhat Linux version is RHEL 9.x with Kernel version 5.x</li>
 <li>Also in smartphones we have Android Operating System with Linux Kernel.</li>
@@ -470,7 +476,7 @@
 <hr />
 <h2 id="linux-versions"><a class="header" href="#linux-versions">Linux Versions</a></h2>
 <p>Kernel development and versions release is handled by <strong>Open Source Community</strong></p>
-<p><img src="../assets/Linux_versions.svg" alt="Linux versions.svg" /></p>
+<p><img src="../assets/Linux_Versions.svg" alt="Linux Versions.svg" /></p>
 <hr />
 <h2 id="storage"><a class="header" href="#storage">Storage</a></h2>
 <ul>
@@ -514,9 +520,9 @@
 <p><img src="../assets/Basic_Partition_Layout_1.svg" alt="Basic Partition Layout_1.svg" /></p>
 <h3 id="swap-partition"><a class="header" href="#swap-partition">Swap Partition</a></h3>
 <ul>
-<li>In Linux there is a special partition called swap partition in other words it is virtual memory. It is also known as paging process.</li>
+<li>In Linux there is a special partition called swap partition in other words it is virtual memory. It is also known as paging process in windows.</li>
 <li>It provides extra RAM to the system.</li>
-<li>For example if there is 4gb RAM in the system and all the processes are full (RAM is full) then the system (RAM) borrows some space from the storage and it that storage acts as a RAM.</li>
+<li>For example if there is 4gb RAM in the system and all the processes are full (RAM is full) then the system (RAM) borrows some space from the storage and that storage acts as a RAM.</li>
 <li>It is a temporary RAM</li>
 </ul>
 <p><img src="../assets/Basic_Partition_Layout_2.svg" alt="Basic Partition Layout _2.png" /></p>
@@ -624,22 +630,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

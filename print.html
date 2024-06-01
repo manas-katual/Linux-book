@@ -31,6 +31,8 @@
 
         <!-- Custom theme stylesheets -->
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body class="sidebar-visible no-js">
     <div id="body-container">
@@ -147,6 +149,9 @@
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/manas-katual" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
 
                     </div>
@@ -413,14 +418,15 @@
 </style>
 <p><img src="./Linux/assets/thoreaus_hut.svg" alt="thoreaus_hut.svg" /></p>
 <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>Welcome traveler! You’ve stumbled into my humble garden of thought</p>
-<p>I am currently exploring about Linux. Particularly I am making this notes for Red Hat (RHCSA Exam). But this notes apply for all Linux distros out there with some minor changes</p>
-<p>It is not well structured and completed yet. I am working on it. Feel free to correct me if anything is missing.</p>
+<p>Welcome traveler! You’ve stumbled into my humble garden of thought.</p>
+<p>I am currently exploring about Linux. Particularly I am making this notes for Red Hat (RHCSA Exam). But this notes apply for all Linux distros out there with some minor changes.</p>
+<p>This are my personal Notes and is not well structured and completed yet. I am working on it. Feel free to correct me if anything I have written is wrong.</p>
+<p>I will also try to add some tasks for practicing.</p>
 <h2 id="key-landing-pages"><a class="header" href="#key-landing-pages">Key Landing Pages</a></h2>
 <ul>
 <li><a href="./RHCSA.html">RHCSA</a></li>
-<li>[[Tasks]]</li>
-<li>[[RHCE]]</li>
+<li><a href="./Tasks.html">Tasks</a></li>
+<li><a href="./RHCE.html">RHCE</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-callouts {
@@ -674,6 +680,7 @@
 <ul>
 <li><a href="./Linux/RHCSA/Linux_Fundamentals.html">Linux Fundamentals</a></li>
 <li><a href="./Linux/RHCSA/File_Management.html">File Management</a></li>
+<li><a href="./Linux/RHCSA/User_management.html">User Management</a></li>
 </ul>
 </li>
 </ul>
@@ -915,6 +922,7 @@
 }
 </style>
 <h1 id="fundamentals"><a class="header" href="#fundamentals">Fundamentals</a></h1>
+<hr />
 <h2 id="operating-system"><a class="header" href="#operating-system">Operating System</a></h2>
 <ul>
 <li>Operating system is the platform between the hardware and software of a computer.</li>
@@ -961,7 +969,7 @@
 <li>Linux has only Kernel space and no user space.</li>
 <li>Also, Linux is not a type of Unix.</li>
 <li>Linux is an independent, Unix like Kernel.</li>
-<li>Software companies like Redhat, Suse, Canonical (Ubuntu), etc. create user space on top of Linux Kernel and covert it into an Operating System.</li>
+<li>Software companies like Redhat, Suse, Canonical (Ubuntu), etc. create user space on top of Linux Kernel and convert it into an Operating System.</li>
 <li>Redhat Linux is an OS, but Linux is just a Kernel.</li>
 <li>Latest Stable Redhat Linux version is RHEL 9.x with Kernel version 5.x</li>
 <li>Also in smartphones we have Android Operating System with Linux Kernel.</li>
@@ -974,7 +982,7 @@
 <hr />
 <h2 id="linux-versions"><a class="header" href="#linux-versions">Linux Versions</a></h2>
 <p>Kernel development and versions release is handled by <strong>Open Source Community</strong></p>
-<p><img src="Linux/RHCSA/../assets/Linux_versions.svg" alt="Linux versions.svg" /></p>
+<p><img src="Linux/RHCSA/../assets/Linux_Versions.svg" alt="Linux Versions.svg" /></p>
 <hr />
 <h2 id="storage"><a class="header" href="#storage">Storage</a></h2>
 <ul>
@@ -1018,9 +1026,9 @@
 <p><img src="Linux/RHCSA/../assets/Basic_Partition_Layout_1.svg" alt="Basic Partition Layout_1.svg" /></p>
 <h3 id="swap-partition"><a class="header" href="#swap-partition">Swap Partition</a></h3>
 <ul>
-<li>In Linux there is a special partition called swap partition in other words it is virtual memory. It is also known as paging process.</li>
+<li>In Linux there is a special partition called swap partition in other words it is virtual memory. It is also known as paging process in windows.</li>
 <li>It provides extra RAM to the system.</li>
-<li>For example if there is 4gb RAM in the system and all the processes are full (RAM is full) then the system (RAM) borrows some space from the storage and it that storage acts as a RAM.</li>
+<li>For example if there is 4gb RAM in the system and all the processes are full (RAM is full) then the system (RAM) borrows some space from the storage and that storage acts as a RAM.</li>
 <li>It is a temporary RAM</li>
 </ul>
 <p><img src="Linux/RHCSA/../assets/Basic_Partition_Layout_2.svg" alt="Basic Partition Layout _2.png" /></p>
@@ -1873,7 +1881,7 @@
 <h2 id="server-access-types--"><a class="header" href="#server-access-types--">Server access types :-</a></h2>
 <p><strong>OS access -</strong> performed by admins and developers for administration and development
 <strong>Application access -</strong> performed by end users for accessing application</p>
-<h2 id="aaa-process---this-process-is-required-to-access-any-application-or-os"><a class="header" href="#aaa-process---this-process-is-required-to-access-any-application-or-os">AAA process :- (This Process is required to access any application or OS)</a></h2>
+<h2 id="aaa-process--"><a class="header" href="#aaa-process--"><abbr title="This Process is required to access any application or OS">AAA process :-</abbr></a></h2>
 <ul>
 <li><strong>A → Authentication  (aap kaun hai)</strong></li>
 <li><strong>A → Authorization (aap kya yeh kar sakte hai)</strong></li>
@@ -1883,14 +1891,19 @@
 <li>When we create a user in Linux, it gets created in locked state</li>
 <li>To unlock a user, it is mandatory to either set a password or disable password</li>
 </ul>
-<h2 id="user-types---i-have-to-put-it-in-a-box"><a class="header" href="#user-types---i-have-to-put-it-in-a-box">User types :- (I have to put it in a box)</a></h2>
+<div class="mdbook-callouts mdbook-callouts-info">
+<p class="mdbook-callouts-title">
+  <span class="mdbook-callouts-icon"></span>
+  info
+</p>
+<p>User types :-</p>
 <ul>
 <li><strong>local user</strong> :- end user with limited privileges</li>
-<li><strong>Super user</strong> :- admin user with full privileges (root). ==In android we root our devices to get root access==</li>
+<li><strong>Super user</strong> :- admin user with full privileges (root). <mark>In android we root our devices to get root access</mark></li>
 <li><strong>System user</strong> :- inbuilt user used by the <em>OS</em> and application internally (we cannot login with this user)</li>
 </ul>
-<hr />
-<h2 id="commands-2"><a class="header" href="#commands-2">Commands</a></h2>
+</div>
+<h3 id="commands-2"><a class="header" href="#commands-2">Commands</a></h3>
 <ol>
 <li><code>useradd jane</code> → Add a user account</li>
 <li><code>usermod -l jake jane</code> → Change a username</li>
@@ -1908,23 +1921,189 @@
 </ol>
 <hr />
 <h2 id="password-aging-policies"><a class="header" href="#password-aging-policies">Password Aging Policies</a></h2>
-<h3 id="password-aging-policies-are-critical-for-user-security"><a class="header" href="#password-aging-policies-are-critical-for-user-security">Password aging policies are critical for user security</a></h3>
-<h3 id="there-are-4-main-password-aging-policy"><a class="header" href="#there-are-4-main-password-aging-policy">There are 4 main password aging policy</a></h3>
+<p><em>Password aging policies are critical for user security</em></p>
+<p><strong>There are 4 main password aging policy</strong></p>
 <ul>
 <li><strong>minimum age "0"</strong> : days gap between two password change</li>
 <li><strong>maximum age "99999"</strong> : days after which password is expired</li>
 <li><strong>warning age "7"</strong> : days before password expiry, that user is warned</li>
 <li><strong>password inactive "-1"</strong> days after password expiry that account is disabled</li>
 </ul>
-<p>To change aging policy of a user :
-<code>chage jane</code>
-To check aging policy of a user :
-<code>chage -l jane</code></p>
+<p>To change aging policy of a user : <code>chage jane</code></p>
+<p>To check aging policy of a user : <code>chage -l jane</code></p>
 <p>There are also password complexity policies like inclusion of upper-case/lower-case character, digit, special characters, minimum passwd length</p>
 <p><u><strong>Command to set complexity parameters</strong></u> :</p>
 <pre><code class="language-bash">authconfig --enablerequpper --enablereqlower --enablereqdigit --enablereqother --passminlen=8 --update
 </code></pre>
 <p><strong>Dictionary check</strong> → It means we cannot use any dictionary words for our password</p>
+<div class="mdbook-callouts mdbook-callouts-note">
+<p class="mdbook-callouts-title">
+  <span class="mdbook-callouts-icon"></span>
+  note
+</p>
+<p>Passwords are encrypted using SHA512 algorithm</p>
+</div>
+<hr />
+<h2 id="group-management"><a class="header" href="#group-management">Group Management</a></h2>
+<ul>
+<li>A Group is a set of multiple users</li>
+<li>With every user, a default group is created.</li>
+<li>The name of default group is same as the name of user</li>
+<li>By default, every user is associated with its own group</li>
+<li>root can create additional groups</li>
+<li>Just creating group is not enough, group and user must be associated</li>
+<li>A user can associate with multiple groups</li>
+<li>A user is a user, A group is a group</li>
+<li>Their association is either primary or supplementary. <strong>A group or user is not primary or supplementary</strong></li>
+<li>A user can have multiple groups associated as supplementary, but their can be only 1 primary group for a user</li>
+</ul>
+<h3 id="commands-3"><a class="header" href="#commands-3">Commands</a></h3>
+<ol>
+<li>To create a group : <code>groupadd sales</code></li>
+<li>To delete a group : <code>groupdel sales</code></li>
+<li>To create primary association : <code>usermod -g sales ganesh</code></li>
+<li>To create supplementary association : <code>usermod -aG sales ganesh</code></li>
+<li>To check group association of a group : <code>id ganesh</code></li>
+<li>To check existence of group : <code>getent group sales</code> OR <code>getent group</code></li>
+</ol>
+<hr />
+<h2 id="advance-user-management"><a class="header" href="#advance-user-management">Advance User Management</a></h2>
+<p><img src="Linux/RHCSA/../assets/Advance_User_Management_1.svg" alt="Advance User Management 1" /></p>
+<ul>
+<li>When a user is created its group also get created and his association will be primary</li>
+<li>And also its UID &amp; GID get created</li>
+<li>UID stands for User ID</li>
+<li>GID stands for Group ID</li>
+<li>Every users UID is unique &amp; Every Groups GID is unique</li>
+<li>Minimum UID &amp; GID value for local users and group is 100 it is incremental by 1</li>
+<li>UID and GID '0' is always assigned to root and its group</li>
+<li>1-999 is reserved for system users &amp; groups.</li>
+<li>Default maximum limit for UID and GID is 60000. But it is changeable it can be increased or decreased.</li>
+<li>Every user is given profile files. Profiles are loaded every time when a user will login. Profile files are always hidden and are stored in user's home directory. It is called ".bashrc"</li>
+</ul>
+<p><img src="Linux/RHCSA/../assets/Advance_User_Management_2.svg" alt="Advance User Management 2" /></p>
+<p><strong>Default values that useradd command use while creating a user are stored in 2 files</strong></p>
+<p><u>/etc/default/useradd</u></p>
+<ul>
+<li>home = /home</li>
+<li>shell = /bin/bash</li>
+<li>inactive = -1</li>
+</ul>
+<p><u>/etc/login.defs</u></p>
+<ul>
+<li>min uid 1000</li>
+<li>max uid 60000</li>
+</ul>
+<p>Group</p>
+<ul>
+<li>min gid 1000</li>
+<li>max gid 60000</li>
+</ul>
+<p>Aging</p>
+<ul>
+<li>min age 0</li>
+<li>max age 99999</li>
+<li>warn age 7</li>
+</ul>
+<p><img src="Linux/RHCSA/../assets/Advance_User_Management_3.svg" alt="Advance User Management 3" /></p>
+<ul>
+<li>By default, useradd command refers default values for creating a user from /etc/login.defs and /etc/default/useradd file</li>
+<li>Admin can create a customized user by mentioning the values in the command</li>
+<li>Such command is called an extended useradd command</li>
+</ul>
+<h3 id="commands--"><a class="header" href="#commands--">Commands :-</a></h3>
+<p>Create a user 'harry' with UID as 6003</p>
+<pre><code class="language-bash">useradd -u 6003 harry
+</code></pre>
+<p>Create a user 'susan' with home directory in <code>/usr/local</code></p>
+<pre><code class="language-bash">useradd -b /usr/local susan
+</code></pre>
+<p>Create a user 'Donald' with a no login shell</p>
+<pre><code class="language-bash">useradd -s /sbin/nologin donald
+</code></pre>
+<p>Let's understand this command</p>
+<pre><code class="language-bash">useradd -u 9993 -b /usr/local/bin -G hr natasha
+</code></pre>
+<div class="mdbook-callouts mdbook-callouts-info">
+<p class="mdbook-callouts-title">
+  <span class="mdbook-callouts-icon"></span>
+  info
+</p>
+<p><strong>Command Lifeline :-</strong></p>
+<ul>
+<li>To see short description of command :
+<ul>
+<li><code>useradd --help</code></li>
+<li><code>ls --help</code></li>
+</ul>
+</li>
+<li>To see full detail of a command :
+<ul>
+<li><code>man useradd</code></li>
+<li><code>man tar</code></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Users and groups are just entries in some database files the four user and group database files are :</p>
+<p><img src="Linux/RHCSA/../assets/Advance_User_Management_4.svg" alt="Advance User Management 4" /></p>
+<p>This files have multiple columns known as fields Each field contains information related to user or group</p>
+<p><strong>/etc/passwd is actual user database file A user's existence depends on this file /etc/passwd is a file with 7 fields delimited by ':'</strong></p>
+<p><img src="Linux/RHCSA/../assets/Advance_User_Management_5.svg" alt="Advance User Management 5" /></p>
+<p>The 7 different fields are :</p>
+<ul>
+<li>login name</li>
+<li>password</li>
+<li>uid</li>
+<li>gid of primary group</li>
+<li>gecos (finger info)</li>
+<li>default directory</li>
+<li>default shell</li>
+</ul>
+<div class="mdbook-callouts mdbook-callouts-info">
+<p class="mdbook-callouts-title">
+  <span class="mdbook-callouts-icon"></span>
+  info
+</p>
+<ul>
+<li>Login name will contain login name</li>
+<li>password will not contain anything it will redirect to shadow</li>
+<li>uid will contain userid</li>
+<li>gid will be gid of primary group</li>
+</ul>
+</div>
+<p><strong>/etc/shadow is a password database file it contains to main information - encrypted password and password aging policies /etc/shadow is a file with 9 fields delimited by ':'</strong></p>
+<p><img src="Linux/RHCSA/../assets/Advance_User_Management_6.svg" alt="Advanced User Management 6" /></p>
+<p>The 9 different fields are :</p>
+<ul>
+<li>Login name</li>
+<li>encrypted password</li>
+<li>days since 1st Jan 1970, that was last changed</li>
+<li>minimum age</li>
+<li>maximum age</li>
+<li>warning age</li>
+<li>password inactive</li>
+<li>days since 1st Jan 1970, that account was last disabled</li>
+<li>empty</li>
+</ul>
+<p><strong>/etc/group is a group database file. It consists of 4 fields delimited by ':'</strong></p>
+<p><img src="Linux/RHCSA/../assets/Advance_User_Management_7.svg" alt="Advance User Management 7" /></p>
+<p>The 4 different fields are :</p>
+<ul>
+<li>group name</li>
+<li>password</li>
+<li>gid</li>
+<li>member users</li>
+</ul>
+<p><strong>/etc/gshadow is a group database file. It consists of 4 fields delimited by ':'</strong></p>
+<p><img src="Linux/RHCSA/../assets/Advance_User_Management_8.svg" alt="Advance User Management 8" /></p>
+<p>The 4 different fields are :</p>
+<ul>
+<li>group name</li>
+<li>encrypted password</li>
+<li>like gecos</li>
+<li>member users</li>
+</ul>
 
                     </main>
 
@@ -1943,22 +2122,6 @@ To check aging policy of a user :
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
@@ -1979,7 +2142,9 @@ To check aging policy of a user :
 
         <script>
         window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
         });
         </script>
 
