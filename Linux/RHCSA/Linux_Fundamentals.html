@@ -581,6 +581,7 @@
 <p>Shell is the interactive program that listens to our commands, pass to kernel space and return output/error on screen</p>
 <p><strong>How does a operating system works version 2.0</strong></p>
 <p>First user will give instruction to user space through shell then the shell will pass the instruction to kernel space execution of the instruction will happen in kernel space and after that kernel will give the output/error to user space</p>
+<p><img src="../assets/Operating_System_v2.svg" alt="Operating System v2" /></p>
 <p><strong>Types of shell :-</strong>
 <img src="../assets/Basic_Linux_Terms.svg" alt="Basic Linux Terms.svg" /></p>
 <hr />
@@ -630,6 +631,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

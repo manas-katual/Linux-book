@@ -553,11 +553,11 @@
 </ul>
 <p><img src="../assets/Absolute_Path.svg" alt="Absolute Path.svg" /></p>
 <ul>
-<li><code>. dot</code>  → it represents current directory</li>
-<li><code>.. double dot</code> → it represents previous directory</li>
-<li><code>~ tilda</code> → it represents user's home directory</li>
-<li><code>$ dollar</code> → it means normal user</li>
-<li><code># hash</code> → it means root user</li>
+<li><code>. (dot)</code>  → it represents current directory</li>
+<li><code>.. (double dot)</code> → it represents previous directory</li>
+<li><code>~ (tilda)</code> → it represents user's home directory</li>
+<li><code>$ (dollar)</code> → it means normal user</li>
+<li><code># (hashtag)</code> → it means root user</li>
 <li>In Linux if we want to change our directory we start from <code>/</code></li>
 <li>for e.g. If we want to go to conf directory the command will be <code>/etc/httpd/conf</code> (refer to above diagram)</li>
 <li>If we are in a directory <code>/etc</code> and we want to go to totally different directory <code>/usr/local/sbin</code> then we have to give its absolute path e.g. <code>cd /usr/local/sbin</code></li>
@@ -653,8 +653,10 @@
 <li>command → vim filename
 <h4 id="mode"><a class="header" href="#mode">Mode</a></h4>
 <ul>
-<li>execution : To perform operation</li>
-<li>insert : to type the data</li>
+<li>Normal Mode : This is the default mode for vim. It's used for navigation, editing, and other commands.</li>
+<li>Insert Mode : In this mode, you can insert text into the document.</li>
+<li>Visual Mode : This mode is used for selecting blocks of text.</li>
+<li>CLI Mode : This mode is used for entering commands, such as saving changes or exiting Vim.</li>
 </ul>
 </li>
 </ul>
@@ -663,7 +665,7 @@
   <span class="mdbook-callouts-icon"></span>
   note
 </p>
-<p>default mode is execution in vim</p>
+<p>default mode is Normal Mode in vim</p>
 </div>
 <h3 id="sed"><a class="header" href="#sed">sed</a></h3>
 <ul>
@@ -742,6 +744,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
